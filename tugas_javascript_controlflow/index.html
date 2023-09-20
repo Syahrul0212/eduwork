@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js control flow</title>
+  </head>
+  <body>
+    <h1>js control flow</h1>
+
+    <script>
+      let nilai = prompt("input nilai anda syahrul : ");
+
+      switch (true) {
+        case nilai > 90:
+          alert("Nilai anda A");
+          break;
+        case nilai >= 80 && nilai <= 90:
+          alert("Nilai anda B");
+          break;
+        case nilai >= 70 && nilai < 80:
+          alert("Nilai anda C");
+          break;
+        case nilai >= 60 && nilai < 70:
+          alert("Nilai anda D");
+          break;
+        default:
+          alert("Nilai anda E");
+      }
+    </script>
+  </body>
+</html>
