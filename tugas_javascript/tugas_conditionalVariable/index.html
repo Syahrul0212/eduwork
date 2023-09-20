@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Conditional Variable</title>
+</head>
+<body>
+    <h1>Js Conditional Variable</h1>
+
+    <script>
+        const pacar = 20
+
+        const banyakPacar = pacar > 10 ? 'Banyak' : 'Sedikit'
+        console.log(banyakPacar)
+
+        const listAnak = [
+            {
+                nama: 'Budi',
+                usia: 10
+            },
+            {
+                nama: 'Susi',
+                usia: 12
+            },
+            {
+                nama: 'Cici',
+                usia: 11
+            },
+        ]
+
+        const banyakAnak = listAnak.filter(anak => {
+            return anak.usia > 10
+        })
+        console.log("Filter", banyakAnak)
+
+        const banyakAnak2 = listAnak.map(anak => {
+            return anak.usia > 10 ? 'Banyak' : 'Sedikit'
+        })
+        console.log("Map", banyakAnak2)
+    </script>
+</body>
+</html>
