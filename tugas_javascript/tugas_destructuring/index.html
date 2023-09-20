@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Destructuring</title>
+  </head>
+  <body>
+    <h1>JS Destructuring</h1>
+
+    <script>
+      // Data Daftar Siswa
+      const siswa = {
+        nama: "John Doe",
+        umur: 18,
+        kelas: "XII A",
+        nilai: {
+          matematika: 90,
+          bahasaInggris: 85,
+          fisika: 88,
+        },
+      };
+
+      // Data Daftar Produk
+      const produk = [
+        { id: 1, nama: "Laptop", harga: 8000000 },
+        { id: 2, nama: "Smartphone", harga: 3000000 },
+        { id: 3, nama: "Mouse", harga: 200000 },
+      ];
+
+      // Fungsi untuk Menampilkan Informasi Siswa dengan Default Value
+      function tampilkanInfoSiswa({
+        nama,
+        umur,
+        kelas,
+        nilai: { matematika = 0, bahasaInggris = 0, biologi = 0 },
+      }) {
+        console.log(`Nama: ${nama}`);
+        console.log(`Umur: ${umur}`);
+        console.log(`Kelas: ${kelas}`);
+        console.log(`Nilai Matematika: ${matematika}`);
+        console.log(`Nilai Bahasa Inggris: ${bahasaInggris}`);
+        console.log(`Nilai Biologi: ${biologi}`);
+      }
+
+      // Fungsi untuk Menampilkan Harga Produk dengan Alias
+      function tampilkanHargaProduk([produkPertama, , produkKetiga]) {
+        console.log(`Harga Produk Pertama: ${produkPertama.harga}`);
+        console.log(`Harga Produk Ketiga: ${produkKetiga.harga}`);
+      }
+
+      // Panggil Fungsi dengan Destructuring
+      console.log("Informasi Siswa:");
+      tampilkanInfoSiswa(siswa);
+
+      console.log("\nHarga Produk:");
+      tampilkanHargaProduk(produk);
+    </script>
+  </body>
+</html>
