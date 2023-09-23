@@ -40,7 +40,7 @@ class Table {
       table = "<p class='text-center'>Loading...</p>";
     } else {
       table =
-        "<table class='table table-success table-hover'>" +
+        "<table class='table table-dark table-striped'>" +
         this.createHeader() +
         this.createBody() +
         "</table>";
