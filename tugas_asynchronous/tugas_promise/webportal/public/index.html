@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal Berita</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="bg-blue-500 p-4">
+      <div class="container mx-auto">
+        <div class="flex justify-between items-center">
+          <a href="#" class="text-white text-xl font-bold ps-40">News App</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mx-auto py-5 px-5">
+      <div class="mb-4 flex justify-center">
+        <input
+          type="text"
+          id="searchInput"
+          class="w-9/12 px-4 py-2 border rounded-full"
+          placeholder="Cari berita..."
+        />
+      </div>
+
+      <div id="newsList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/card.js" type="module"></script>
+  </body>
+</html>
