@@ -5,6 +5,22 @@ class Table {
     this.isLoading = false;
   }
 
+  fetchData(callback) {
+    this.isLoading = true;
+
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((data) => {
+        this.data = data;
+        this.isLoading = false;
+        callback();
+      })
+      .catch((err) => {
+        this.isLoading = false;
+        console.log("Error fetching data:", err);
+      });
+  }
+
   createHeader() {
     let open = "<thead><tr>";
     let close = "</tr></thead>";
@@ -47,24 +63,6 @@ class Table {
     }
 
     element.innerHTML = table;
-  }
-  fetchData(callback) {
-    this.isLoading = true;
-    this.render(app);
-
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((data) => {
-        this.data = data;
-        this.isLoading = false;
-        this.render(app);
-        callback();
-      })
-      .catch((error) => {
-        this.isLoading = false;
-        console.error("Error fetching data:", error);
-        this.render(app);
-      });
   }
 }
 
