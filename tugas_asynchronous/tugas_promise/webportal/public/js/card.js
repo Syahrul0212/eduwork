@@ -1,6 +1,6 @@
 const apiKey = "c59c8887f5ea4271a82766c8ef110fb3";
 const newsApiUrl =
-  "https://newsapi.org/v2/everything?q=tesla&from=2023-08-24&sortBy=publishedAt";
+  "https://newsapi.org/v2/everything?q=apple&from=2023-09-23&to=2023-09-23&sor";
 
 const searchInput = document.getElementById("searchInput");
 const newsList = document.getElementById("newsList");
